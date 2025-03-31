@@ -1,0 +1,173 @@
+.col-img-detalle-producto img{
+  height: 50vh;
+}
+
+button.custom-btn-carrito {
+  background-color: #99B9C5 !important;  
+  color: #6e6e6c !important;
+  border: none !important;
+}
+
+button.custom-btn-carrito:hover {
+  background-color: #adadad !important;
+  color: #6e6e6c !important; 
+}
+
+button.custom-btn-comprar {
+  background-color: #CEBF02 !important;  
+  color: #51514E !important;
+  border: none !important;
+}
+
+button.custom-btn-comprar:hover {
+  background-color: #adadad !important;
+  color: #6e6e6c !important;  
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6e6e6c; 
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #819ba5; 
+  max-width: 900px;
+  margin: 0 auto; 
+}
+
+.base p span {
+  color: #CEBF02; 
+  font-weight: bold;
+}
+
+.product-price {
+  color: #51514E; 
+}
+
+.product-category {
+  color: #51514E; 
+}
+
+.product-stock {
+  color: #51514E; 
+}
+
+.product-code {
+  color: #51514E; 
+}
+
+.product-price-value {
+  color: #CEBF02; 
+  font-weight: normal; 
+}
+
+.contact-row {
+  font-size: 1rem;
+  color: #6e6e6c;  
+  gap: 30px;
+  display: flex;
+}
+
+.contact-column {
+  padding-left: 11px; 
+  padding-right: 11px; 
+}
+
+.contacto-social {
+  display: flex;
+  gap: 5px; /
+}
+
+.social-icon i {
+  font-size: 28px; 
+  color: #CEBF02; 
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icon i:hover {
+  color: #99B9C5; 
+}
+
+.map-container {
+  width: 100%;
+  height: 300px;
+}
+
+.about-titulo {
+  color: #6e6e6c;
+}
+
+.about-texto {
+  color: #6e6e6c;
+}
+
+.founder-text {
+  text-align: center;
+  color: #6e6e6c;
+  margin-top: 5px; 
+}
+
+.founder-image {
+  margin-bottom: 5px; /
+}
+
+button.error-button {
+  background-color: #99B9C5 !important; 
+  border: none !important;
+  color: #51514E !important;
+}
+
+button.error-button:hover {
+  background-color: #CEBF02 !important; 
+  border: none;
+  color: #51514E !important;
+}
+
+.users-table table td:nth-child(2),
+.users-table table th:nth-child(2),
+.users-table table td:nth-child(4),
+.users-table table th:nth-child(4) {
+  text-align: center;
+}
+
+.tabla-carrito,
+.tabla-carrito th,
+.tabla-carrito td {
+  color: #6e6e6e !important;
+}
+
+.btn-carrito-comprar {
+  background-color: #CEBF02 !important;
+  color: #51514E !important;
+  border: none;
+}
+
+.tabla-carrito .btn-carrito-borrar {
+  background-color: #99B9C5 !important;
+  color: #51514E !important;
+  border: none;
+}
+
+.input-center input {
+  color: #6e6e6c;
+  text-align: center;
+  display: block;
+  margin: 0 auto;  
+}
+
+.titulo-tablaCarrito {
+  color: #6e6e6c;
+  text-align: center;
+}
+
+.vh {
+  height: 70vh;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px; 
+  margin: auto;
+}
