@@ -94,7 +94,7 @@ const FormAdmin = () => {
 
   return (
     <>
-      <Form className='w-25'>
+      <Form className='w-50'>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre</Form.Label>
           <Form.Control type="text" name='title' value={formProduct.title} onChange={handleChangeProduct} />
