@@ -1,0 +1,147 @@
+.table-container {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;  
+}
+
+.table-container table td,
+.table-container table th {
+  color: #6e6e6e !important;    
+  text-overflow: ellipsis;
+  min-width: 80px;
+  word-wrap: break-word;
+}
+
+.table td,
+.table th {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.table th {
+  text-align: center; 
+}
+
+.table td:first-child,
+.table th:first-child {
+  white-space: nowrap; 
+  text-align: center;
+}
+
+.table td:nth-child(2),
+.table td:nth-child(4) {
+  text-align: left;
+}
+
+.table img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.table-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center; 
+}
+
+.table-actions button,
+.table td button {
+  width: 120px !important;
+  padding: 8px 12px;
+  text-align: center; 
+}
+
+.btn-eliminar {
+  background-color: #849094 !important;
+  color: #000 !important;
+}
+
+.btn-eliminar:hover {
+  background-color: #99a2a5 !important;
+  color: #000 !important;
+}
+
+.btn-habilitar {
+  background-color: #CEBF02 !important;
+  color: #51514E !important;
+}
+
+.btn-habilitar:hover {
+  background-color: #ded33f !important;
+  color: #51514E !important;
+}
+
+.table-actions .btn-success {
+  background-color: #99B9C5 !important;
+  color: #51514E;
+  border: none !important;
+}
+
+.table-actions .btn-success:hover {
+  background-color: #b6d1da !important;
+}
+
+@media (max-width: 480px) {
+  .table td:nth-child(2),
+  .table th:nth-child(2) {
+    width: 30%;
+  }
+
+  .table td:nth-child(3),
+  .table th:nth-child(3) {
+    width: 30%;
+  }
+
+  .table td:nth-child(4),
+  .table th:nth-child(4) {
+    display: none;
+  }
+
+  .table td:last-child,
+  .table th:last-child {
+    width: 40%; 
+  }
+
+  .table td button {
+    width: 100px !important; 
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .table-actions {
+    gap: 12px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .table-container table td,
+  .table-container table th {
+    min-width: 60px;
+  }
+
+  .table-actions button {
+    width: 90px !important;
+    padding: 6px 10px;
+  }
+  
+  .table img {
+    max-width: 80px;
+  }
+
+    .table-actions {
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
