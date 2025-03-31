@@ -1,0 +1,26 @@
+.lista-contrasenia li {
+  font-size: 0.8em;
+}
+
+.btn-primary {  
+  background-color: #CEBF02 !important;
+  color: #51514E !important;
+  border: 0 !important; 
+  transition: background-color 0.3s ease;  
+}
+
+.btn-primary:hover {
+  background-color: #99B9C5 !important;
+  color: #51514E !important;
+  border: 0 !important;
+}
+
+.form-label {
+  color: #51514E;
+}
+
+.text-muted {
+  color:#d4d4d4 !important;
+  font-size: 14px;
+}
+

@@ -1,0 +1,16 @@
+.navbar.navbar-transparent.navbar-fixed-top {
+    background-color: transparent !important;
+    border: none;
+    display: block;
+    height: auto;
+    transform: translate(0);
+    overflow-y: inherit;
+}
+.navbar img.logo {
+  width: 100px !important; 
+  transition: transform 0.3s ease-in-out; 
+}
+.navbar img.logo:hover {
+  transform: scale(0.9); 
+  filter: brightness(0.8); 
+}

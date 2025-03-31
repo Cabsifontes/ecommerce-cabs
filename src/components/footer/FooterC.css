@@ -1,0 +1,45 @@
+.footer {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.logo-footer .logo {
+  max-width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.logo-footer .logo:hover {
+  transform: scale(0.9);
+}
+
+.footer-social a {
+  color: #51514e;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #cebf02;
+  transform: scale(1.1);
+}
+
+.base {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  margin: 0;
+  position: relative; 
+  bottom: 0;
+}
+
+.base.w-100.m-0 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.base.w-100.m-0 > div {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
