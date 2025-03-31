@@ -1,0 +1,53 @@
+.card {
+  border: none !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.custom-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+.custom-card-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #7e7d7d !important; 
+}
+
+.custom-card-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #7e7d7d; 
+}
+
+.card .card-body .price {
+  color: #99b9c5; 
+}
+
+.image-container:hover .custom-card-img {
+  transform: scale(1.1);
+}
+
+.custom-link {
+  text-decoration: none;
+  color: #cebf02;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem !important;
+}
+
+.custom-link:hover {
+  color: #99b9c5;
+}
