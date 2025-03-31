@@ -229,3 +229,4 @@ const FormC = ({ idPage }) => {
 }
 
 export default FormC
+
