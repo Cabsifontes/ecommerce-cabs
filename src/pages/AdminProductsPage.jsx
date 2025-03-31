@@ -3,7 +3,7 @@ import TableC from "../components/table/TableC";
 import { useContext, useEffect } from "react";
 import { ProductContext } from "../pages/ProductContext";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2"; 
+import Swal from "sweetalert2";
 
 const AdminProductsPage = () => {
   const { productos, setProductos } = useContext(ProductContext);
@@ -25,29 +25,35 @@ const AdminProductsPage = () => {
     );
     setProductos(productosActualizados);
   };
-  
+
   const habilitarProducto = (id) => {
     console.log(`Intentando cambiar estado del producto con ID: ${id}`);
 
+    const producto = productos.find((prod) => prod.id === id);
+    if (!producto) return;
+
+    const nuevoEstado = producto.status === "disable" ? "enable" : "disable";
+
+    const mensaje =
+      nuevoEstado === "enable"
+        ? "¿Deseas deshabilitar este producto?"
+        : "¿Deseas habilitar este producto?";
+
     Swal.fire({
-      title: "¿Estás seguro?",
-      text: "¿Deseas deshabilitar este producto?",
+      title: "Confirmar acción",
+      text: mensaje,
       icon: "warning",
       showCancelButton: true,
-      confirmButtonText: "Sí, deshabilitarlo",
-      cancelButtonText: "No, cancelar",
-      confirmButtonColor: "#cebf02",
+      confirmButtonText:
+        nuevoEstado === "disable" ? "Sí, habilitar" : "Sí, deshabilitar",
+      cancelButtonText: "Cancelar",
+      confirmButtonColor: "#CEBF02",
       cancelButtonColor: "#6e6e6e",
     }).then((result) => {
       if (result.isConfirmed) {
         setProductos((prevProductos) => {
           const productosActualizados = prevProductos.map((producto) =>
-            producto.id === id
-              ? {
-                  ...producto,
-                  status: producto.status === "enable" ? "disable" : "enable",
-                }
-              : producto
+            producto.id === id ? { ...producto, status: nuevoEstado } : producto
           );
           localStorage.setItem(
             "productos",
@@ -57,14 +63,14 @@ const AdminProductsPage = () => {
         });
 
         Swal.fire(
-          "Producto Deshabilitado",
-          "El estado del producto ha sido actualizado.",
+          "Estado actualizado",
+          `El producto ha sido ${
+            nuevoEstado === "enable" ? "desbilitado" : "habilitado"
+          }.`,
           "success"
         );
       }
     });
-
-    console.log("Habilitar producto con id: ", id);
   };
 
   const editarProducto = (id, nuevosDatos) => {
@@ -82,7 +88,7 @@ const AdminProductsPage = () => {
 
   return (
     <Container className="my-5">
-      <h2 className="text-center mt-5" style={{ color: "#6e6e6c" }}>
+      <h2 className="text-center mt-5 mb-5" style={{ color: "#6e6e6c" }}>
         Administrar Productos
       </h2>
 
@@ -91,16 +97,18 @@ const AdminProductsPage = () => {
           Agregar Producto
         </Link>
       </div>
-      <TableC
-        array={productos}
-        idPage="products"
-        eliminarProducto={eliminarProducto}
-        habilitarProducto={habilitarProducto} 
-        editarProducto={editarProducto}
-        showEditButton={true}
-        actionsClass="vertical-actions"
-        className="admin-products-table"
-      />
+      <div className="table-responsive">
+        <TableC
+          array={productos}
+          idPage="products"
+          eliminarProducto={eliminarProducto}
+          habilitarProducto={habilitarProducto}
+          editarProducto={editarProducto}
+          showEditButton={true}
+          actionsClass="vertical-actions"
+          className="admin-products-table"
+        />
+      </div>
     </Container>
   );
 };
